@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  atdd-ui:
+    build: .
+    #build: ./src
+    image: sionyks/atdd-ui
+    ports:
+      - "3001:3001"
+    #volumes:
+    #  - ./:/app
+    environment:
+      - REACT_APP_API_BASE_URL=http://3.122.103.184:3002
+    container_name: atdd-uiv2
