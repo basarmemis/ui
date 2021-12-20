@@ -20,6 +20,7 @@ function TodoAddButton({ setTodos, input, setInput }) {
 
     //#region for production
     const handleClick = async () => {
+        if(input === "") return;
         await api.addTodo(input);
         setTodos(await api.getAll());
         await setInput("");

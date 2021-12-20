@@ -1,14 +1,9 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { ListGroup } from 'react-bootstrap';
-import { TodosAPI } from './../../api/todos';
 
-const api = new TodosAPI(process.env.REACT_APP_API_BASE_URL);
 
 function TodosList({ todos, setTodos }) {
-    useEffect(() => {
-        api.getAll()
-            .then(response => setTodos(response));
-    }, [setTodos]);
+
     return (
         <ListGroup
             data-testid="test-listGroup"

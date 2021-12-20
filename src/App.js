@@ -1,11 +1,14 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Header from './components/Header/Header';
 import './App.css';
 import TodoTextBox from './components/TodoTextBox/TodoTextBox';
 import TodoAddButton from './components/TodoAddButton/TodoAddButton';
 import TodosList from './components/TodosList/TodosList';
+import { TodosAPI } from './api/todos';
+
+const api = new TodosAPI(process.env.REACT_APP_API_BASE_URL);
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -14,6 +17,11 @@ function App() {
   //#region For Test Purposes
 
   //#endregion
+
+  useEffect(() => {
+    api.getAll()
+      .then(response => setTodos(response));
+  }, [setTodos]);
 
   return (
     <Container>

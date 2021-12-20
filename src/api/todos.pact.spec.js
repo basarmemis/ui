@@ -36,7 +36,8 @@ describe("API Pact test", () => {
                     headers: {
                         'Content-Type': 'application/json; charset=utf-8'
                     },
-                    body: eachLike({ id: 1, name: "Do HomeWork", completed: false }),
+                    //body: eachLike({ id: 1, name: "Do HomeWork", completed: false }),
+                    body: [],
                 },
             });
             const api = new TodosAPI(provider.mockService.baseUrl);
@@ -44,9 +45,11 @@ describe("API Pact test", () => {
             // make request to Pact mock server
             const todos = await api.getAll();
 
-            expect(todos).toStrictEqual([
+            expect(todos).toStrictEqual([]);
+
+            /*expect(todos).toStrictEqual([
                 { id: 1, name: "Do HomeWork", completed: false }
-            ]);
+            ]);*/
         });
     });
 

@@ -1,5 +1,5 @@
-I, [2021-12-20T22:47:07.846597 #18356]  INFO -- : Registered expected interaction GET /todos
-D, [2021-12-20T22:47:07.846597 #18356] DEBUG -- : {
+I, [2021-12-20T23:00:13.383077 #80364]  INFO -- : Registered expected interaction GET /todos
+D, [2021-12-20T23:00:13.383325 #80364] DEBUG -- : {
   "description": "get all todos",
   "providerState": "todos exist",
   "request": {
@@ -17,20 +17,14 @@ D, [2021-12-20T22:47:07.846597 #18356] DEBUG -- : {
     "headers": {
       "Content-Type": "application/json; charset=utf-8"
     },
-    "body": {
-      "json_class": "Pact::ArrayLike",
-      "contents": {
-        "id": 1,
-        "name": "Do HomeWork",
-        "completed": false
-      },
-      "min": 1
-    }
+    "body": [
+
+    ]
   },
   "metadata": null
 }
-I, [2021-12-20T22:47:07.868587 #18356]  INFO -- : Received request GET /todos
-D, [2021-12-20T22:47:07.869584 #18356] DEBUG -- : {
+I, [2021-12-20T23:00:13.393386 #80364]  INFO -- : Received request GET /todos
+D, [2021-12-20T23:00:13.393585 #80364] DEBUG -- : {
   "path": "/todos",
   "query": "",
   "method": "get",
@@ -38,31 +32,25 @@ D, [2021-12-20T22:47:07.869584 #18356] DEBUG -- : {
     "Content-Type": "application/json; charset=utf-8",
     "Accept": "application/json, text/plain, */*",
     "User-Agent": "axios/0.24.0",
-    "Host": "127.0.0.1:65374",
+    "Host": "127.0.0.1:40239",
     "Connection": "close",
     "Version": "HTTP/1.1"
   }
 }
-I, [2021-12-20T22:47:07.869584 #18356]  INFO -- : Found matching response for GET /todos
-D, [2021-12-20T22:47:07.869584 #18356] DEBUG -- : {
+I, [2021-12-20T23:00:13.393918 #80364]  INFO -- : Found matching response for GET /todos
+D, [2021-12-20T23:00:13.394042 #80364] DEBUG -- : {
   "status": 200,
   "headers": {
     "Content-Type": "application/json; charset=utf-8"
   },
-  "body": {
-    "json_class": "Pact::ArrayLike",
-    "contents": {
-      "id": 1,
-      "name": "Do HomeWork",
-      "completed": false
-    },
-    "min": 1
-  }
+  "body": [
+
+  ]
 }
-I, [2021-12-20T22:47:07.882501 #18356]  INFO -- : Verifying - interactions matched
-I, [2021-12-20T22:47:07.894322 #18356]  INFO -- : Cleared interactions
-I, [2021-12-20T22:47:07.907325 #18356]  INFO -- : Registered expected interaction POST /todos
-D, [2021-12-20T22:47:07.907325 #18356] DEBUG -- : {
+I, [2021-12-20T23:00:13.399681 #80364]  INFO -- : Verifying - interactions matched
+I, [2021-12-20T23:00:13.403228 #80364]  INFO -- : Cleared interactions
+I, [2021-12-20T23:00:13.411136 #80364]  INFO -- : Registered expected interaction POST /todos
+D, [2021-12-20T23:00:13.411369 #80364] DEBUG -- : {
   "description": "Create Todo With Name NewTodo",
   "providerState": "todo with Name NewTodo not exists",
   "request": {
@@ -95,8 +83,8 @@ D, [2021-12-20T22:47:07.907325 #18356] DEBUG -- : {
   },
   "metadata": null
 }
-I, [2021-12-20T22:47:07.918292 #18356]  INFO -- : Received request POST /todos
-D, [2021-12-20T22:47:07.918292 #18356] DEBUG -- : {
+I, [2021-12-20T23:00:13.416166 #80364]  INFO -- : Received request POST /todos
+D, [2021-12-20T23:00:13.416429 #80364] DEBUG -- : {
   "path": "/todos",
   "query": "",
   "method": "post",
@@ -108,13 +96,13 @@ D, [2021-12-20T22:47:07.918292 #18356] DEBUG -- : {
     "Content-Type": "application/json; charset=utf-8",
     "Accept": "application/json, text/plain, */*",
     "User-Agent": "axios/0.24.0",
-    "Host": "127.0.0.1:65374",
+    "Host": "127.0.0.1:40239",
     "Connection": "close",
     "Version": "HTTP/1.1"
   }
 }
-I, [2021-12-20T22:47:07.918292 #18356]  INFO -- : Found matching response for POST /todos
-D, [2021-12-20T22:47:07.918292 #18356] DEBUG -- : {
+I, [2021-12-20T23:00:13.416760 #80364]  INFO -- : Found matching response for POST /todos
+D, [2021-12-20T23:00:13.416945 #80364] DEBUG -- : {
   "status": 201,
   "headers": {
     "Content-Type": "application/json; charset=utf-8"
@@ -129,6 +117,6 @@ D, [2021-12-20T22:47:07.918292 #18356] DEBUG -- : {
     "editable": false
   }
 }
-I, [2021-12-20T22:47:07.930342 #18356]  INFO -- : Verifying - interactions matched
-I, [2021-12-20T22:47:07.942364 #18356]  INFO -- : Cleared interactions
-I, [2021-12-20T22:47:07.952904 #18356]  INFO -- : Writing pact for api to C:/Users/Administrator/Desktop/Case/ui/pacts/ui-api.json
+I, [2021-12-20T23:00:13.422383 #80364]  INFO -- : Verifying - interactions matched
+I, [2021-12-20T23:00:13.427568 #80364]  INFO -- : Cleared interactions
+I, [2021-12-20T23:00:13.433010 #80364]  INFO -- : Writing pact for api to /home/nyks/Development/ui/pacts/ui-api.json
