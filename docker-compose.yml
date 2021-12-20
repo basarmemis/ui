@@ -3,7 +3,7 @@ services:
   atdd-ui:
     build: .
     #build: ./src
-    image: sionyks/atdd-ui
+    image: sionyks/atdd-uiv2
     ports:
       - "3000:3000"
     #volumes:
