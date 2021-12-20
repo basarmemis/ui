@@ -1,24 +1,55 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { useState } from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import Header from './components/Header/Header';
 import './App.css';
+import TodoTextBox from './components/TodoTextBox/TodoTextBox';
+import TodoAddButton from './components/TodoAddButton/TodoAddButton';
+import TodosList from './components/TodosList/TodosList';
 
 function App() {
+  const [todos, setTodos] = useState([]);
+  const [input, setInput] = useState("");
+
+  //#region For Test Purposes
+
+  //#endregion
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Row>
+        <Row className='row-style'>
+          <Col style={{ textAlign: "center", marginTop: "50px" }}>
+            <Header />
+          </Col>
+        </Row>
+        <Row className='row-style'>
+          <Col lg={10} md={8} sm={7} xs={6}>
+            <TodoTextBox
+              setInput={setInput}
+              input={input}
+            />
+          </Col>
+          <Col lg={2} md={4} sm={5} xs={6}>
+            <TodoAddButton
+              todos={todos}
+              setTodos={setTodos}
+              input={input}
+              setInput={setInput}
+            />
+          </Col>
+        </Row>
+        <Row className='row-style'>
+          <Col>
+            {todos.length > 0 ?
+              <TodosList
+                todos={todos}
+                setTodos={setTodos}
+              /> : <div data-testid="test-emptyDiv"></div>}
+          </Col>
+        </Row>
+      </Row>
+    </Container>
   );
 }
 
